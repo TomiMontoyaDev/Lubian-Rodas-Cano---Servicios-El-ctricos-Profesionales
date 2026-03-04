@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #0d3b66;
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* IMPORTANTE */
+}
+
+/* Logo navbar */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Ocultar checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Botón hamburguesa oculto en desktop */
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f4d35e;
+}
+
+/* HERO */
+.hero {
+  background: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #f4d35e;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-top: -90px;
+}
+.hero p {
+  margin-bottom: 20px;
+}
+
+/* Logo del hero separado */
+.hero-logo {
+  width: 55%;
+  height: auto;
+  margin: 5px auto;
+  display: block;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #f4d35e;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #e9c046;
+}
+
+.btn-secondary {
+  background: white;
+  color: #1d3557;
+}
+
+.btn-secondary:hover {
+  background: #28a745;
+  color: white;
+}
+
+/* SECTIONS */
+section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #0d3b66;
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #0d3b66;
+  color: white;
+}
+
+/* ABOUT */
+.about {
+  background: #f1f1f1;
+  text-align: center;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact-btn {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* FOOTER */
+.footer {
+  background: #0d3b66;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+.credit {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #ddd;
+}
+
+/* ========================= */
+/* RESPONSIVE NAVBAR */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0d3b66;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+
+    transition: all 0.4s ease;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}

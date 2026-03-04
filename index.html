@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lubian Rodas Cano | Servicios Eléctricos</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <h1 class="logo">
+          <img src="./img/logo.png" alt="Logo" class="logo-img" />Lubian Rodas
+          Cano
+        </h1>
+
+        <!-- Checkbox -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+        <!-- Botón hamburguesa -->
+        <label for="menu-toggle" class="hamburger">☰</label>
+
+        <!-- Links -->
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <h1 class="hero-title">Lubian Rodas Cano</h1>
+        <img src="./img/logo.png" alt="Logo" class="hero-logo" />
+        <h2>Servicios Eléctricos Profesionales</h2>
+        <p>Tecnólogo en Electricidad • Tarjeta Prof. CONAPTEL 26494</p>
+        <div class="hero-buttons">
+          <a href="tel:3128826627" class="btn btn-primary">Llamar Ahora</a>
+          <a
+            href="https://wa.me/573128826627"
+            target="_blank"
+            class="btn btn-secondary"
+            >WhatsApp</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="services">
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+
+        <div class="services-grid">
+          <div class="card">
+            <h3>Electricidad</h3>
+            <p>
+              Instalaciones, mantenimiento, reparación de cortocircuitos y
+              cambio de tableros eléctricos.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Hidrosanitario</h3>
+            <p>
+              Instalación y reparación de sanitarios, tuberías y mantenimiento
+              general.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Pintura</h3>
+            <p>
+              Pintura interior y exterior, acabados profesionales y reparación
+              de superficies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre mí</h2>
+        <p>
+          Tecnólogo en Electricidad con tarjeta profesional vigente. Ofrezco
+          trabajos seguros, garantizados y cumpliendo normativas técnicas.
+          Atención responsable y puntual.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+
+        <div class="contact-info">
+          <p><strong>Teléfono:</strong> 312 882 6627</p>
+          <p><strong>Email:</strong> lrodas1973@gmail.com</p>
+        </div>
+
+        <a
+          href="https://wa.me/573128826627/?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20un%20servicio!"
+          target="_blank"
+          class="btn btn-primary contact-btn"
+        >
+          Solicitar Servicio por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Lubian Rodas Cano - Servicios Eléctricos</p>
+        <p class="credit">Designed by Tomas Montoya</p>
+      </div>
+    </footer>
+    <script>
+      const links = document.querySelectorAll(".nav-links a");
+      const checkbox = document.getElementById("menu-toggle");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          checkbox.checked = false;
+        });
+      });
+    </script>
+  </body>
+</html>
